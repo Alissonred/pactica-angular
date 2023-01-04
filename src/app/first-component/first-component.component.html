@@ -1,0 +1,14 @@
+<p>first-component works!</p>
+<h3 [style.color]="edad<18?'red':'blue'">mi edad es {{edad}}años</h3>
+<h1>soy
+  <p *ngIf="edad>18"> mayor</p>
+  <p *ngIf="edad<18"> menor</p>
+  de edad
+</h1>
+<button (click)="ageDecrease()">disminuir</button>
+<button (click)="ageIncrease()">aumentar</button>
+
+<h3>lista de nombres:</h3>
+<ul>
+  <li *ngFor="let nombre of nombres; let indice = index">{{indice + '.'+nombre}}</li>
+</ul>
